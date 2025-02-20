@@ -1,0 +1,59 @@
+trigger:
+ - main
+
+pool: 'vmsct-beunik-ubuntu-agents'
+
+variables:
+  - name: serviceName
+    value: blog-api
+  - name: nodeVersion
+    value: '18.20.4'
+
+stages:
+- stage: Build
+  jobs:
+  - job: build
+    steps:
+     - task: Docker@2
+       displayName: 'Compile and Publish Image'
+       inputs:
+        containerRegistry: acr-beunik-production
+        command: 'buildAndPush'
+        Dockerfile: Dockerfile
+        repository: beunik/${{ variables.serviceName }}
+        tags: $(Build.BuildNumber)
+
+- stage: Deploy_to_Prod
+  dependsOn: ["Build"]
+  jobs:
+    - deployment: deploy_to_prod
+      variables:
+      - group: migrations-production
+      environment: beunik-production
+      strategy:
+       runOnce:
+         deploy:
+           steps:
+            - checkout: self
+            - task: Kubernetes@1
+              inputs:
+                connectionType: 'Kubernetes Service Connection'
+                kubernetesServiceEndpoint: 'production-svcs-aks-connection'
+                command: 'login'
+
+            - script: |
+                kubectl apply -f akv2k8s/api-beunik-production.yaml
+              displayName: 'Install Secrets'
+
+            - task: HelmInstaller@1
+            - script: |
+                helm upgrade -i ${{ variables.serviceName }} ./helm -f ./helm/values.yaml --set namespace=production \
+                --set image=crbeunik.azurecr.io/beunik/${{ variables.serviceName }}:$(Build.BuildNumber) --wait
+              displayName: 'Deploy'
+
+
+
+
+
+
+

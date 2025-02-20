@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "healths",
+  "info": {
+    "singularName": "health",
+    "pluralName": "healths",
+    "displayName": "health"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ok": {
+      "type": "string"
+    }
+  }
+}

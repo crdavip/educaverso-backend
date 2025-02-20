@@ -1,0 +1,91 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.serviceName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.serviceName }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.serviceName}}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.serviceName }}
+    spec:
+      containers:
+      - name: {{ .Values.serviceName }}
+        image: {{ .Values.image }}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5005
+        env:
+          - name: HOST
+            value: {{ .Values.host | quote }}
+          - name: PORT
+            value: {{ .Values.serverPort | quote }}
+          - name: DATABASE_CLIENT
+            value: {{ .Values.databaseClient | quote }}
+          - name: DATABASE_SSL
+            value: {{ .Values.databaseSsl | quote }}
+          - name: BUNNY_STORAGE_ZONE
+            value: {{ .Values.bunnyStorageZone | quote }}
+          - name: BUNNY_PULL_ZONE
+            value: {{ .Values.bunnyPullZone | quote }}
+          - name: APP_KEYS
+            valueFrom:
+              secretKeyRef:
+                name: beunik-blog-api-app-keys
+                key: app-keys
+          - name: API_TOKEN_SALT
+            valueFrom:
+              secretKeyRef:
+                name: beunik-blog-api-token-salt
+                key: token-salt
+          - name: ADMIN_JWT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: beunik-blog-api-admin-jwt-secret
+                key: admin-jwt-secret
+          - name: TRANSFER_TOKEN_SALT
+            valueFrom:
+              secretKeyRef:
+                name: beunik-blog-api-transfer-token-salt
+                key: transfer-token-salt
+          - name: JWT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: beunik-blog-api-jwt-secret
+                key: jwt-secret
+          - name: DATABASE_HOST
+            valueFrom:
+              secretKeyRef:
+                name: beunik-api-postgress-host
+                key: postgress-host
+          - name: DATABASE_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: beunik-api-postgress-user
+                key: postgress-user
+          - name: DATABASE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: beunik-api-postgress-password
+                key: postgress-password
+          - name: DATABASE_NAME
+            valueFrom:
+              secretKeyRef:
+                name: beunik-api-postgress-db
+                key: postgress-db
+          - name: DATABASE_PORT
+            valueFrom:
+              secretKeyRef:
+                name: beunik-api-postgress-port
+                key: postgress-port
+          - name: BUNNY_API_KEY
+            valueFrom:
+              secretKeyRef:
+                name: beunik-blog-api-bunny-api-key
+                key: bunny-api-key
