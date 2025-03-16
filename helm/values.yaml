@@ -1,9 +1,0 @@
-namespace: production
-image: crbeunik.azurecr.io/beunik/blog-api:remoteDebug
-serviceName: beunik-blog-api
-domain: cms.beunik.co
-serverPort: "5005"
-databaseClient: postgres
-databaseSsl: false
-bunnyStorageZone: beunik-blog-images
-bunnyPullZone: beunik-blog-pull-zone
