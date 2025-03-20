@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_details",
+  "info": {
+    "singularName": "user-detail",
+    "pluralName": "user-details",
+    "displayName": "UserDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "profession": {
+      "type": "enumeration",
+      "enum": [
+        "Barbero",
+        "Chef",
+        "Coach",
+        "Cosmetólogo",
+        "Dermatólogo",
+        "Dietista",
+        "Entrenador",
+        "Esteticista",
+        "Estudiante",
+        "Fisioterapeuta",
+        "Instructor",
+        "Manicurista",
+        "Maquillador",
+        "Mentor",
+        "Nutricionista",
+        "Peluquero",
+        "Preparador Físico",
+        "Profesor",
+        "Psicólogo",
+        "Tecnólogo en Alimentos",
+        "Terapeuta"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 150
+    },
+    "profileImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Hombre",
+        "Mujer",
+        "Otro"
+      ],
+      "required": true
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "reviewed"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "userDetail"
+    },
+    "socials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::social.social",
+      "mappedBy": "userDetail"
+    },
+    "portfolios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::portfolio.portfolio",
+      "mappedBy": "userDetail"
+    },
+    "certificates": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::certificate.certificate",
+      "mappedBy": "userDetail"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "userDetail"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "userDetail"
+    }
+  }
+}
