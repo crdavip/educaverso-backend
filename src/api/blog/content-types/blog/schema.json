@@ -41,6 +41,11 @@
       "relation": "manyToOne",
       "target": "api::user-detail.user-detail",
       "inversedBy": "blogs"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     }
   }
 }

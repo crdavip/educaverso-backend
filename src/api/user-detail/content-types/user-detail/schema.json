@@ -11,10 +11,10 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "username": {
+    "fullname": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "profession": {
       "type": "enumeration",
