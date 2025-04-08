@@ -1,4 +1,7 @@
 // import type { Core } from '@strapi/strapi';
+import type { Core } from '@strapi/strapi';
+import { registerInterceptorMiddleware } from './utils/http-middleware-register';
+import { userDetailAdminSync } from './utils/userDetailAdminSync';
 
 export default {
   /**
@@ -7,7 +10,10 @@ export default {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/* { strapi }: { strapi: Core.Strapi } */) {},
+  register({ strapi }: { strapi: Core.Strapi }) {
+    strapi.server.use(registerInterceptorMiddleware());
+    strapi.server.use(userDetailAdminSync());
+  },
 
   /**
    * An asynchronous bootstrap function that runs before

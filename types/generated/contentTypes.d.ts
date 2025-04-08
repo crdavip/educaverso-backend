@@ -629,9 +629,10 @@ export interface ApiUserDetailUserDetail extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 150;
       }>;
-    fullname: Schema.Attribute.String & Schema.Attribute.Required;
+    firstname: Schema.Attribute.String & Schema.Attribute.Required;
     gender: Schema.Attribute.Enumeration<['Hombre', 'Mujer', 'Otro']> &
       Schema.Attribute.Required;
+    lastname: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-04-03T20:26:46.108Z"
+    "x-generation-date": "2025-04-08T17:33:03.940Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -5772,7 +5772,10 @@
               "documentId": {
                 "type": "string"
               },
-              "fullname": {
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
                 "type": "string"
               },
               "profession": {
@@ -7227,7 +7230,10 @@
                 "documentId": {
                   "type": "string"
                 },
-                "fullname": {
+                "firstname": {
+                  "type": "string"
+                },
+                "lastname": {
                   "type": "string"
                 },
                 "profession": {
@@ -9160,7 +9166,10 @@
               "documentId": {
                 "type": "string"
               },
-              "fullname": {
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
                 "type": "string"
               },
               "profession": {
@@ -11696,7 +11705,10 @@
               "documentId": {
                 "type": "string"
               },
-              "fullname": {
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
                 "type": "string"
               },
               "profession": {
@@ -13151,7 +13163,10 @@
               "documentId": {
                 "type": "string"
               },
-              "fullname": {
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
                 "type": "string"
               },
               "profession": {
@@ -15090,7 +15105,10 @@
               "documentId": {
                 "type": "string"
               },
-              "fullname": {
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
                 "type": "string"
               },
               "profession": {
@@ -16900,13 +16918,17 @@
         "properties": {
           "data": {
             "required": [
-              "fullname",
+              "firstname",
+              "lastname",
               "profession",
               "gender"
             ],
             "type": "object",
             "properties": {
-              "fullname": {
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
                 "type": "string"
               },
               "profession": {
@@ -17108,7 +17130,8 @@
       "UserDetail": {
         "type": "object",
         "required": [
-          "fullname",
+          "firstname",
+          "lastname",
           "profession",
           "gender"
         ],
@@ -17119,7 +17142,10 @@
           "documentId": {
             "type": "string"
           },
-          "fullname": {
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
             "type": "string"
           },
           "profession": {
@@ -17784,7 +17810,10 @@
                     "documentId": {
                       "type": "string"
                     },
-                    "fullname": {
+                    "firstname": {
+                      "type": "string"
+                    },
+                    "lastname": {
                       "type": "string"
                     },
                     "profession": {
