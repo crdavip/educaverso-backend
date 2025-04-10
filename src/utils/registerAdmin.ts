@@ -1,6 +1,6 @@
 import type Koa from "koa";
 
-export const registerInterceptorMiddleware = () => {
+export const registerAdmin = () => {
   return async (ctx: Koa.Context, next: () => Promise<void>) => {
     await next();
 

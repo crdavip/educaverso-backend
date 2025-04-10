@@ -1,7 +1,9 @@
-// import type { Core } from '@strapi/strapi';
 import type { Core } from '@strapi/strapi';
-import { registerInterceptorMiddleware } from './utils/http-middleware-register';
+import { registerAdmin } from './utils/registerAdmin';
 import { userDetailAdminSync } from './utils/userDetailAdminSync';
+import { createCertificate } from './utils/createCertificate';
+import { createPortfolio } from './utils/createPortfolio';
+import { createBlog } from './utils/createBlog';
 
 export default {
   /**
@@ -11,8 +13,11 @@ export default {
    * This gives you an opportunity to extend code.
    */
   register({ strapi }: { strapi: Core.Strapi }) {
-    strapi.server.use(registerInterceptorMiddleware());
+    strapi.server.use(registerAdmin());
     strapi.server.use(userDetailAdminSync());
+    strapi.server.use(createCertificate());
+    strapi.server.use(createPortfolio());
+    strapi.server.use(createBlog());
   },
 
   /**
