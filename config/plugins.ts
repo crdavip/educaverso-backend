@@ -2,11 +2,13 @@ export default () => ({
   upload: {
     config: {
       provider: "@nexide/strapi-provider-bunny",
+      breakpoints: {},
       providerOptions: {
-        api_key: "013214a7-b822-4232-ae00bcb00570-ef4e-47cb",
+        api_key: "4c180441-7d47-42d5-a29e44bb8fb6-b45f-4977",
         storage_zone: "beunik-blog-images",
-        pull_zone: "beunik-blog-pull-zone",
-        hostname: "beunik-blog-pull-zone.b-cdn.net",
+        pull_zone: "beunik-blog-pull-zone.b-cdn.net",
+        hostname: "storage.bunnycdn.com",
+        optimization: false,
       },
     },
   },

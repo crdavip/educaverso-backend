@@ -8,8 +8,8 @@ export default [
         useDefaults: true,
         directives: {
           "connect-src": ["'self'", "https:"],
-          "img-src": ["'self'", "data:", "blob:", "market-assets.strapi.io", "beunik-blog-pull-zone"],
-          "media-src": ["'self'", "data:", "blob:", "market-assets.strapi.io", "beunik-blog-pull-zone"],
+          "img-src": ["'self'", "data:", "blob:", "market-assets.strapi.io", "beunik-blog-pull-zone.b-cdn.net"],
+          "media-src": ["'self'", "data:", "blob:", "market-assets.strapi.io", "beunik-blog-pull-zone.b-cdn.net"],
           upgradeInsecureRequests: null,
         },
       },

@@ -4,6 +4,7 @@ import { userDetailAdminSync } from './utils/userDetailAdminSync';
 import { createCertificate } from './utils/createCertificate';
 import { createPortfolio } from './utils/createPortfolio';
 import { createBlog } from './utils/createBlog';
+import sharp from 'sharp';
 
 export default {
   /**
@@ -18,6 +19,7 @@ export default {
     strapi.server.use(createCertificate());
     strapi.server.use(createPortfolio());
     strapi.server.use(createBlog());
+    sharp.cache(false);
   },
 
   /**
