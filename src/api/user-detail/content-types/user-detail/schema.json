@@ -110,6 +110,11 @@
       "relation": "oneToMany",
       "target": "api::blog.blog",
       "mappedBy": "userDetail"
+    },
+    "profileViews": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
     }
   }
 }
