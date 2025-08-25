@@ -1,0 +1,153 @@
+{
+  "categories": [
+    { "name": "Diseño Gráfico", "slug": "diseno-grafico" },
+    { "name": "Fotografía", "slug": "fotografia" },
+    { "name": "Desarrollo Web", "slug": "desarrollo-web" },
+    { "name": "Desarrollo Móvil", "slug": "desarrollo-movil" },
+    { "name": "Marketing Digital", "slug": "marketing-digital" },
+    { "name": "Finanzas", "slug": "finanzas" },
+    { "name": "Coaching", "slug": "coaching" },
+    { "name": "Idiomas", "slug": "idiomas" },
+    { "name": "Cine", "slug": "cine" },
+    { "name": "Fitness", "slug": "fitness" },
+    { "name": "Nutrición", "slug": "nutricion" },
+    { "name": "Moda", "slug": "moda" },
+    { "name": "Belleza", "slug": "belleza" }
+  ],
+  "professions": [
+    {
+      "category": "diseno-grafico",
+      "professions": [
+        "Diseñador Gráfico",
+        "Director de Arte",
+        "Ilustrador Digital",
+        "Diseñador de Branding",
+        "Diseñador Editorial"
+      ]
+    },
+    {
+      "category": "fotografia",
+      "professions": [
+        "Fotógrafo Profesional",
+        "Fotógrafo de Producto",
+        "Fotógrafo de Moda",
+        "Fotógrafo de Bodas",
+        "Fotoperiodista",
+        "Retocador Fotográfico"
+      ]
+    },
+    {
+      "category": "desarrollo-web",
+      "professions": [
+        "Desarrollador Frontend",
+        "Desarrollador Backend",
+        "Desarrollador Full Stack",
+        "Ingeniero en QA",
+        "Arquitecto de Software",
+        "Desarrollador Web Freelance"
+      ]
+    },
+    {
+      "category": "desarrollo-movil",
+      "professions": [
+        "Desarrollador iOS",
+        "Desarrollador Android",
+        "Desarrollador Flutter",
+        "Desarrollador React Native",
+        "Ingeniero Mobile QA",
+        "Mobile UX/UI Designer"
+      ]
+    },
+    {
+      "category": "marketing-digital",
+      "professions": [
+        "Especialista en SEO",
+        "Especialista en SEM",
+        "Community Manager",
+        "Growth Hacker",
+        "Content Manager",
+        "Social Media Strategist"
+      ]
+    },
+    {
+      "category": "finanzas",
+      "professions": [
+        "Asesor Financiero",
+        "Contador Público",
+        "Auditor",
+        "Trader",
+        "Analista de Inversiones",
+        "Consultor en Finanzas Personales"
+      ]
+    },
+    {
+      "category": "coaching",
+      "professions": [
+        "Coach de Vida",
+        "Coach Ejecutivo",
+        "Coach de Negocios",
+        "Coach Deportivo",
+        "Mentor Personal",
+        "Facilitador de Talleres"
+      ]
+    },
+    {
+      "category": "idiomas",
+      "professions": [
+        "Profesor de Inglés",
+        "Profesor de Español",
+        "Traductor Freelance",
+        "Intérprete",
+        "Profesor de Francés",
+        "Profesor de Alemán"
+      ]
+    },
+    {
+      "category": "cine",
+      "professions": [
+        "Director de Cine",
+        "Productor Audiovisual",
+        "Guionista",
+        "Editor de Video",
+        "Director de Fotografía",
+        "Actor/Actriz"
+      ]
+    },
+    {
+      "category": "fitness",
+      "professions": [
+        "Entrenador Personal",
+        "Instructor de Gimnasio",
+        "Preparador Físico",
+        "Entrenador de CrossFit",
+        "Instructor de Yoga",
+        "Instructor de Pilates"
+      ]
+    },
+    {
+      "category": "nutricion",
+      "professions": [
+        "Nutricionista Clínico",
+        "Dietista",
+        "Coach Nutricional",
+        "Especialista en Suplementación",
+        "Nutricionista Deportivo"
+      ]
+    },
+    {
+      "category": "moda",
+      "professions": [
+        "Diseñador de Moda",
+        "Asesor de Imagen",
+        "Estilista",
+        "Modelista",
+        "Fashion Buyer",
+        "Fashion Blogger"
+      ]
+    },
+    {
+      "category": "belleza",
+      "professions": ["Maquillador Profesional", "Esteticista", "Barbero", "Peluquero", "Manicurista", "Cosmetólogo"]
+    }
+  ]
+}

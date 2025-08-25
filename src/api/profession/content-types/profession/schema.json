@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "professions",
+  "info": {
+    "singularName": "profession",
+    "pluralName": "professions",
+    "displayName": "Profession"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}

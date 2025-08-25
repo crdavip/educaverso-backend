@@ -548,6 +548,35 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiProfessionProfession extends Struct.CollectionTypeSchema {
+  collectionName: 'professions';
+  info: {
+    displayName: 'Profession';
+    pluralName: 'professions';
+    singularName: 'profession';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::profession.profession'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiReviewReview extends Struct.CollectionTypeSchema {
   collectionName: 'reviews';
   info: {
@@ -1238,6 +1267,7 @@ declare module '@strapi/strapi' {
       'api::certificate.certificate': ApiCertificateCertificate;
       'api::contact.contact': ApiContactContact;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
+      'api::profession.profession': ApiProfessionProfession;
       'api::review.review': ApiReviewReview;
       'api::social.social': ApiSocialSocial;
       'api::user-detail.user-detail': ApiUserDetailUserDetail;
