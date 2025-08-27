@@ -702,32 +702,7 @@ export interface ApiUserDetailUserDetail extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::portfolio.portfolio'
     >;
-    profession: Schema.Attribute.Enumeration<
-      [
-        'Barbero',
-        'Chef',
-        'Coach',
-        'Cosmet\u00F3logo',
-        'Dermat\u00F3logo',
-        'Dietista',
-        'Entrenador',
-        'Esteticista',
-        'Estudiante',
-        'Fisioterapeuta',
-        'Instructor',
-        'Manicurista',
-        'Maquillador',
-        'Mentor',
-        'Nutricionista',
-        'Peluquero',
-        'Preparador F\u00EDsico',
-        'Profesor',
-        'Psic\u00F3logo',
-        'Tecn\u00F3logo en Alimentos',
-        'Terapeuta',
-      ]
-    > &
-      Schema.Attribute.Required;
+    profession: Schema.Attribute.String & Schema.Attribute.Required;
     profileImage: Schema.Attribute.Media<'images' | 'files'>;
     profileViews: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-08-25T21:16:31.522Z"
+    "x-generation-date": "2025-08-27T21:32:29.820Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -6790,32 +6790,6 @@
               "lastname": {
                 "type": "string"
               },
-              "profession": {
-                "type": "string",
-                "enum": [
-                  "Barbero",
-                  "Chef",
-                  "Coach",
-                  "Cosmetólogo",
-                  "Dermatólogo",
-                  "Dietista",
-                  "Entrenador",
-                  "Esteticista",
-                  "Estudiante",
-                  "Fisioterapeuta",
-                  "Instructor",
-                  "Manicurista",
-                  "Maquillador",
-                  "Mentor",
-                  "Nutricionista",
-                  "Peluquero",
-                  "Preparador Físico",
-                  "Profesor",
-                  "Psicólogo",
-                  "Tecnólogo en Alimentos",
-                  "Terapeuta"
-                ]
-              },
               "description": {
                 "type": "string"
               },
@@ -8006,6 +7980,9 @@
               "profileViews": {
                 "type": "integer"
               },
+              "profession": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -8250,32 +8227,6 @@
                 },
                 "lastname": {
                   "type": "string"
-                },
-                "profession": {
-                  "type": "string",
-                  "enum": [
-                    "Barbero",
-                    "Chef",
-                    "Coach",
-                    "Cosmetólogo",
-                    "Dermatólogo",
-                    "Dietista",
-                    "Entrenador",
-                    "Esteticista",
-                    "Estudiante",
-                    "Fisioterapeuta",
-                    "Instructor",
-                    "Manicurista",
-                    "Maquillador",
-                    "Mentor",
-                    "Nutricionista",
-                    "Peluquero",
-                    "Preparador Físico",
-                    "Profesor",
-                    "Psicólogo",
-                    "Tecnólogo en Alimentos",
-                    "Terapeuta"
-                  ]
                 },
                 "description": {
                   "type": "string"
@@ -9936,6 +9887,9 @@
                 "profileViews": {
                   "type": "integer"
                 },
+                "profession": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -10189,32 +10143,6 @@
               },
               "lastname": {
                 "type": "string"
-              },
-              "profession": {
-                "type": "string",
-                "enum": [
-                  "Barbero",
-                  "Chef",
-                  "Coach",
-                  "Cosmetólogo",
-                  "Dermatólogo",
-                  "Dietista",
-                  "Entrenador",
-                  "Esteticista",
-                  "Estudiante",
-                  "Fisioterapeuta",
-                  "Instructor",
-                  "Manicurista",
-                  "Maquillador",
-                  "Mentor",
-                  "Nutricionista",
-                  "Peluquero",
-                  "Preparador Físico",
-                  "Profesor",
-                  "Psicólogo",
-                  "Tecnólogo en Alimentos",
-                  "Terapeuta"
-                ]
               },
               "description": {
                 "type": "string"
@@ -11875,6 +11803,9 @@
               "profileViews": {
                 "type": "integer"
               },
+              "profession": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -13219,32 +13150,6 @@
               "lastname": {
                 "type": "string"
               },
-              "profession": {
-                "type": "string",
-                "enum": [
-                  "Barbero",
-                  "Chef",
-                  "Coach",
-                  "Cosmetólogo",
-                  "Dermatólogo",
-                  "Dietista",
-                  "Entrenador",
-                  "Esteticista",
-                  "Estudiante",
-                  "Fisioterapeuta",
-                  "Instructor",
-                  "Manicurista",
-                  "Maquillador",
-                  "Mentor",
-                  "Nutricionista",
-                  "Peluquero",
-                  "Preparador Físico",
-                  "Profesor",
-                  "Psicólogo",
-                  "Tecnólogo en Alimentos",
-                  "Terapeuta"
-                ]
-              },
               "description": {
                 "type": "string"
               },
@@ -14435,6 +14340,9 @@
               "profileViews": {
                 "type": "integer"
               },
+              "profession": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -14683,32 +14591,6 @@
                     },
                     "lastname": {
                       "type": "string"
-                    },
-                    "profession": {
-                      "type": "string",
-                      "enum": [
-                        "Barbero",
-                        "Chef",
-                        "Coach",
-                        "Cosmetólogo",
-                        "Dermatólogo",
-                        "Dietista",
-                        "Entrenador",
-                        "Esteticista",
-                        "Estudiante",
-                        "Fisioterapeuta",
-                        "Instructor",
-                        "Manicurista",
-                        "Maquillador",
-                        "Mentor",
-                        "Nutricionista",
-                        "Peluquero",
-                        "Preparador Físico",
-                        "Profesor",
-                        "Psicólogo",
-                        "Tecnólogo en Alimentos",
-                        "Terapeuta"
-                      ]
                     },
                     "description": {
                       "type": "string"
@@ -16298,6 +16180,9 @@
                     "profileViews": {
                       "type": "integer"
                     },
+                    "profession": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -16659,32 +16544,6 @@
               "lastname": {
                 "type": "string"
               },
-              "profession": {
-                "type": "string",
-                "enum": [
-                  "Barbero",
-                  "Chef",
-                  "Coach",
-                  "Cosmetólogo",
-                  "Dermatólogo",
-                  "Dietista",
-                  "Entrenador",
-                  "Esteticista",
-                  "Estudiante",
-                  "Fisioterapeuta",
-                  "Instructor",
-                  "Manicurista",
-                  "Maquillador",
-                  "Mentor",
-                  "Nutricionista",
-                  "Peluquero",
-                  "Preparador Físico",
-                  "Profesor",
-                  "Psicólogo",
-                  "Tecnólogo en Alimentos",
-                  "Terapeuta"
-                ]
-              },
               "description": {
                 "type": "string"
               },
@@ -18343,6 +18202,9 @@
               },
               "profileViews": {
                 "type": "integer"
+              },
+              "profession": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -18604,32 +18466,6 @@
               "lastname": {
                 "type": "string"
               },
-              "profession": {
-                "type": "string",
-                "enum": [
-                  "Barbero",
-                  "Chef",
-                  "Coach",
-                  "Cosmetólogo",
-                  "Dermatólogo",
-                  "Dietista",
-                  "Entrenador",
-                  "Esteticista",
-                  "Estudiante",
-                  "Fisioterapeuta",
-                  "Instructor",
-                  "Manicurista",
-                  "Maquillador",
-                  "Mentor",
-                  "Nutricionista",
-                  "Peluquero",
-                  "Preparador Físico",
-                  "Profesor",
-                  "Psicólogo",
-                  "Tecnólogo en Alimentos",
-                  "Terapeuta"
-                ]
-              },
               "description": {
                 "type": "string"
               },
@@ -20289,6 +20125,9 @@
               "profileViews": {
                 "type": "integer"
               },
+              "profession": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -20416,8 +20255,8 @@
             "required": [
               "firstname",
               "lastname",
-              "profession",
-              "gender"
+              "gender",
+              "profession"
             ],
             "type": "object",
             "properties": {
@@ -20426,32 +20265,6 @@
               },
               "lastname": {
                 "type": "string"
-              },
-              "profession": {
-                "type": "string",
-                "enum": [
-                  "Barbero",
-                  "Chef",
-                  "Coach",
-                  "Cosmetólogo",
-                  "Dermatólogo",
-                  "Dietista",
-                  "Entrenador",
-                  "Esteticista",
-                  "Estudiante",
-                  "Fisioterapeuta",
-                  "Instructor",
-                  "Manicurista",
-                  "Maquillador",
-                  "Mentor",
-                  "Nutricionista",
-                  "Peluquero",
-                  "Preparador Físico",
-                  "Profesor",
-                  "Psicólogo",
-                  "Tecnólogo en Alimentos",
-                  "Terapeuta"
-                ]
               },
               "description": {
                 "type": "string"
@@ -20570,6 +20383,9 @@
               "profileViews": {
                 "type": "integer"
               },
+              "profession": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -20631,8 +20447,8 @@
         "required": [
           "firstname",
           "lastname",
-          "profession",
-          "gender"
+          "gender",
+          "profession"
         ],
         "properties": {
           "id": {
@@ -20646,32 +20462,6 @@
           },
           "lastname": {
             "type": "string"
-          },
-          "profession": {
-            "type": "string",
-            "enum": [
-              "Barbero",
-              "Chef",
-              "Coach",
-              "Cosmetólogo",
-              "Dermatólogo",
-              "Dietista",
-              "Entrenador",
-              "Esteticista",
-              "Estudiante",
-              "Fisioterapeuta",
-              "Instructor",
-              "Manicurista",
-              "Maquillador",
-              "Mentor",
-              "Nutricionista",
-              "Peluquero",
-              "Preparador Físico",
-              "Profesor",
-              "Psicólogo",
-              "Tecnólogo en Alimentos",
-              "Terapeuta"
-            ]
           },
           "description": {
             "type": "string"
@@ -21314,32 +21104,6 @@
                     },
                     "lastname": {
                       "type": "string"
-                    },
-                    "profession": {
-                      "type": "string",
-                      "enum": [
-                        "Barbero",
-                        "Chef",
-                        "Coach",
-                        "Cosmetólogo",
-                        "Dermatólogo",
-                        "Dietista",
-                        "Entrenador",
-                        "Esteticista",
-                        "Estudiante",
-                        "Fisioterapeuta",
-                        "Instructor",
-                        "Manicurista",
-                        "Maquillador",
-                        "Mentor",
-                        "Nutricionista",
-                        "Peluquero",
-                        "Preparador Físico",
-                        "Profesor",
-                        "Psicólogo",
-                        "Tecnólogo en Alimentos",
-                        "Terapeuta"
-                      ]
                     },
                     "description": {
                       "type": "string"
@@ -22451,6 +22215,9 @@
                     "profileViews": {
                       "type": "integer"
                     },
+                    "profession": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -22649,6 +22416,9 @@
           },
           "profileViews": {
             "type": "integer"
+          },
+          "profession": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",

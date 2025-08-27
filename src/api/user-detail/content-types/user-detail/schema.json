@@ -20,33 +20,6 @@
       "type": "string",
       "required": true
     },
-    "profession": {
-      "type": "enumeration",
-      "enum": [
-        "Barbero",
-        "Chef",
-        "Coach",
-        "Cosmetólogo",
-        "Dermatólogo",
-        "Dietista",
-        "Entrenador",
-        "Esteticista",
-        "Estudiante",
-        "Fisioterapeuta",
-        "Instructor",
-        "Manicurista",
-        "Maquillador",
-        "Mentor",
-        "Nutricionista",
-        "Peluquero",
-        "Preparador Físico",
-        "Profesor",
-        "Psicólogo",
-        "Tecnólogo en Alimentos",
-        "Terapeuta"
-      ],
-      "required": true
-    },
     "description": {
       "type": "text",
       "maxLength": 150
@@ -115,6 +88,10 @@
       "type": "integer",
       "default": 0,
       "min": 0
+    },
+    "profession": {
+      "type": "string",
+      "required": true
     }
   }
 }
