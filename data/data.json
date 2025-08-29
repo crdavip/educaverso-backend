@@ -1,241 +1,1937 @@
 {
-  "global": {
-    "siteName": "Strapi Blog",
-    "defaultSeo": {
-      "metaTitle": "Page",
-      "metaDescription": "A blog made with Strapi",
-      "shareImage": null
-    },
-    "siteDescription": "A Blog made with Strapi",
-    "favicon": null
-  },
-  "about": {
-    "title": "About the strapi blog",
-    "blocks": [
-      {
-        "__component": "shared.quote",
-        "title": "Thelonius Monk",
-        "body": "You've got to dig it to dig it, you dig?"
-      },
-      {
-        "__component": "shared.rich-text",
-        "body": "## Dedit imago conspicuus cum capillis totidem inhibere\n\nLorem markdownum **rerum**, est limine: columbas: ab infelix hostem arbore nudis\ncrudelis. Videtur reliquit ambo ferrum dote sub amne fatis **illuc**, in magis,\nnec."
-      },
-      {
-        "__component": "shared.media",
-        "file": "coffee-art.jpg"
-      }
-    ]
-  },
   "categories": [
+    { "name": "Diseño Gráfico", "slug": "diseno-grafico" },
+    { "name": "Fotografía", "slug": "fotografia" },
+    { "name": "Desarrollo Web", "slug": "desarrollo-web" },
+    { "name": "Desarrollo Móvil", "slug": "desarrollo-movil" },
+    { "name": "Marketing Digital", "slug": "marketing-digital" },
+    { "name": "Finanzas", "slug": "finanzas" },
+    { "name": "Coaching", "slug": "coaching" },
+    { "name": "Idiomas", "slug": "idiomas" },
+    { "name": "Cine", "slug": "cine" },
+    { "name": "Fitness", "slug": "fitness" },
+    { "name": "Nutrición", "slug": "nutricion" },
+    { "name": "Moda", "slug": "moda" },
+    { "name": "Belleza", "slug": "belleza" }
+  ],
+  "professions": [
     {
-      "name": "news",
-      "slug": "news"
+      "category": "diseno-grafico",
+      "professions": [
+        "Diseñador Gráfico",
+        "Director de Arte",
+        "Ilustrador Digital",
+        "Diseñador de Branding",
+        "Diseñador Editorial"
+      ]
     },
     {
-      "name": "tech",
-      "slug": "tech"
+      "category": "fotografia",
+      "professions": [
+        "Fotógrafo Profesional",
+        "Fotógrafo de Producto",
+        "Fotógrafo de Moda",
+        "Fotógrafo de Bodas",
+        "Fotoperiodista",
+        "Retocador Fotográfico"
+      ]
     },
     {
-      "name": "food",
-      "slug": "food"
+      "category": "desarrollo-web",
+      "professions": [
+        "Desarrollador Frontend",
+        "Desarrollador Backend",
+        "Desarrollador Full Stack",
+        "Ingeniero en QA",
+        "Arquitecto de Software",
+        "Desarrollador Web Freelance"
+      ]
     },
     {
-      "name": "nature",
-      "slug": "nature"
+      "category": "desarrollo-movil",
+      "professions": [
+        "Desarrollador iOS",
+        "Desarrollador Android",
+        "Desarrollador Flutter",
+        "Desarrollador React Native",
+        "Ingeniero Mobile QA",
+        "Mobile UX/UI Designer"
+      ]
     },
     {
-      "name": "story",
-      "slug": "story"
+      "category": "marketing-digital",
+      "professions": [
+        "Especialista en SEO",
+        "Especialista en SEM",
+        "Community Manager",
+        "Growth Hacker",
+        "Content Manager",
+        "Social Media Strategist"
+      ]
+    },
+    {
+      "category": "finanzas",
+      "professions": [
+        "Asesor Financiero",
+        "Contador Público",
+        "Auditor",
+        "Trader",
+        "Analista de Inversiones",
+        "Consultor en Finanzas Personales"
+      ]
+    },
+    {
+      "category": "coaching",
+      "professions": [
+        "Coach de Vida",
+        "Coach Ejecutivo",
+        "Coach de Negocios",
+        "Coach Deportivo",
+        "Mentor Personal",
+        "Facilitador de Talleres"
+      ]
+    },
+    {
+      "category": "idiomas",
+      "professions": [
+        "Profesor de Inglés",
+        "Profesor de Español",
+        "Traductor Freelance",
+        "Intérprete",
+        "Profesor de Francés",
+        "Profesor de Alemán"
+      ]
+    },
+    {
+      "category": "cine",
+      "professions": [
+        "Director de Cine",
+        "Productor Audiovisual",
+        "Guionista",
+        "Editor de Video",
+        "Director de Fotografía",
+        "Actor/Actriz"
+      ]
+    },
+    {
+      "category": "fitness",
+      "professions": [
+        "Entrenador Personal",
+        "Instructor de Gimnasio",
+        "Preparador Físico",
+        "Entrenador de CrossFit",
+        "Instructor de Yoga",
+        "Instructor de Pilates"
+      ]
+    },
+    {
+      "category": "nutricion",
+      "professions": [
+        "Nutricionista Clínico",
+        "Dietista",
+        "Coach Nutricional",
+        "Especialista en Suplementación",
+        "Nutricionista Deportivo"
+      ]
+    },
+    {
+      "category": "moda",
+      "professions": [
+        "Diseñador de Moda",
+        "Asesor de Imagen",
+        "Estilista",
+        "Modelista",
+        "Fashion Buyer",
+        "Fashion Blogger"
+      ]
+    },
+    {
+      "category": "belleza",
+      "professions": ["Maquillador Profesional", "Esteticista", "Barbero", "Peluquero", "Manicurista", "Cosmetólogo"]
     }
   ],
-  "authors": [
+  "users": [
     {
-      "name": "David Doe",
-      "email": "daviddoe@strapi.io",
-      "avatar": "daviddoe@strapi.io.jpg"
+      "username": "AndresG_94",
+      "email": "andresg_94@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Andrés",
+      "lastname": "García",
+      "description": "Apasionado por el diseño de marcas y la identidad visual.",
+      "gender": "Hombre",
+      "category": "diseno-grafico",
+      "profession": "Diseñador de Branding",
+      "photoFile": "Foto-01.jpg",
+      "profileViews": 1897855
     },
     {
-      "name": "Sarah Baker",
-      "email": "sarahbaker@strapi.io",
-      "avatar": "sarahbaker@strapi.io.jpg"
+      "username": "LuisaArt3",
+      "email": "luisaart3@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Luisa",
+      "lastname": "Martínez",
+      "description": "Fotógrafa de moda con experiencia en revistas y editoriales.",
+      "gender": "Mujer",
+      "category": "fotografia",
+      "profession": "Fotógrafo de Moda",
+      "photoFile": "Foto-02.jpg",
+      "profileViews": 446001
+    },
+    {
+      "username": "xXCamiloDevXx",
+      "email": "xxcamilodevxx@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Camilo",
+      "lastname": "Rojas",
+      "description": "Full Stack Developer con foco en React y Node.js.",
+      "gender": "Hombre",
+      "category": "desarrollo-web",
+      "profession": "Desarrollador Full Stack",
+      "photoFile": "Foto-03.jpg",
+      "profileViews": 38012
+    },
+    {
+      "username": "MariaMobile_21",
+      "email": "mariamobile_21@correo.com",
+      "password": "Abcd1234",
+      "firstname": "María",
+      "lastname": "Fernández",
+      "description": "Desarrolladora Android apasionada por apps de impacto social.",
+      "gender": "Mujer",
+      "category": "desarrollo-movil",
+      "profession": "Desarrollador Android",
+      "photoFile": "Foto-04.jpg",
+      "profileViews": 9921
+    },
+    {
+      "username": "JuliSEO7",
+      "email": "juliseo7@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Julián",
+      "lastname": "Sánchez",
+      "description": "Especialista en SEO con experiencia en posicionamiento web.",
+      "gender": "Hombre",
+      "category": "marketing-digital",
+      "profession": "Especialista en SEO",
+      "photoFile": "Foto-05.jpg",
+      "profileViews": 714
+    },
+    {
+      "username": "CarlaFinanceX",
+      "email": "carlafinancex@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Carla",
+      "lastname": "Ramírez",
+      "description": "Asesora financiera enfocada en inversiones sostenibles.",
+      "gender": "Mujer",
+      "category": "finanzas",
+      "profession": "Asesor Financiero",
+      "photoFile": "Foto-06.jpg",
+      "profileViews": 89
+    },
+    {
+      "username": "LifeCoach_JP",
+      "email": "lifecoach_jp@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Juan Pablo",
+      "lastname": "Moreno",
+      "description": "Coach de vida ayudando a jóvenes a alcanzar su máximo potencial.",
+      "gender": "Hombre",
+      "category": "coaching",
+      "profession": "Coach de Vida",
+      "photoFile": "Foto-07.jpg",
+      "profileViews": 9
+    },
+    {
+      "username": "LauraEnIngles",
+      "email": "lauraeningles@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Laura",
+      "lastname": "Ortiz",
+      "description": "Profesora de inglés con enfoque en clases dinámicas.",
+      "gender": "Mujer",
+      "category": "idiomas",
+      "profession": "Profesor de Inglés",
+      "photoFile": "Foto-08.jpg",
+      "profileViews": 5678123
+    },
+    {
+      "username": "CineFanatic09",
+      "email": "cinefanatic09@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Santiago",
+      "lastname": "Ruiz",
+      "description": "Director independiente con proyectos en cortometrajes.",
+      "gender": "Hombre",
+      "category": "cine",
+      "profession": "Director de Cine",
+      "photoFile": "Foto-09.jpg",
+      "profileViews": 681022
+    },
+    {
+      "username": "ValenFit_88",
+      "email": "valenfit_88@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Valentina",
+      "lastname": "Castro",
+      "description": "Entrenadora personal enfocada en fuerza y bienestar integral.",
+      "gender": "Mujer",
+      "category": "fitness",
+      "profession": "Entrenador Personal",
+      "photoFile": "Foto-10.jpg",
+      "profileViews": 12334250
+    },
+    {
+      "username": "NutriCamilaX",
+      "email": "nutricamilax@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Camila",
+      "lastname": "Morales",
+      "description": "Nutricionista clínica enfocada en alimentación consciente.",
+      "gender": "Mujer",
+      "category": "nutricion",
+      "profession": "Nutricionista Clínico",
+      "photoFile": "Foto-11.jpg",
+      "profileViews": 54210
+    },
+    {
+      "username": "ModaJuan22",
+      "email": "modajuan22@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Juan",
+      "lastname": "Hernández",
+      "description": "Diseñador de moda inspirado en tendencias urbanas.",
+      "gender": "Hombre",
+      "category": "moda",
+      "profession": "Diseñador de Moda",
+      "photoFile": "Foto-12.jpg",
+      "profileViews": 905481
+    },
+    {
+      "username": "BeautyLina_7",
+      "email": "beautylina_7@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Carolina",
+      "lastname": "Suárez",
+      "description": "Maquilladora profesional para cine y eventos sociales.",
+      "gender": "Mujer",
+      "category": "belleza",
+      "profession": "Maquillador Profesional",
+      "photoFile": "Foto-13.jpg",
+      "profileViews": 33128
+    },
+    {
+      "username": "UXJose_Dev",
+      "email": "uxjose_dev@correo.com",
+      "password": "Abcd1234",
+      "firstname": "José",
+      "lastname": "Mejía",
+      "description": "Diseñador UX/UI con experiencia en apps móviles.",
+      "gender": "Hombre",
+      "category": "desarrollo-movil",
+      "profession": "Mobile UX/UI Designer",
+      "photoFile": "Foto-14.jpg",
+      "profileViews": 774923
+    },
+    {
+      "username": "FilmLoverAna",
+      "email": "filmloverana@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Ana",
+      "lastname": "Torres",
+      "description": "Editora de video especializada en documentales.",
+      "gender": "Mujer",
+      "category": "cine",
+      "profession": "Editor de Video",
+      "photoFile": "Foto-15.jpg",
+      "profileViews": 60123
+    },
+    {
+      "username": "TrainerLeo99",
+      "email": "trainerleo99@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Leonardo",
+      "lastname": "Patiño",
+      "description": "Preparador físico para atletas de alto rendimiento.",
+      "gender": "Hombre",
+      "category": "fitness",
+      "profession": "Preparador Físico",
+      "photoFile": "Foto-16.jpg",
+      "profileViews": 1283
+    },
+    {
+      "username": "SEOandreaX",
+      "email": "seoandreax@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Andrea",
+      "lastname": "Cortés",
+      "description": "Content manager con enfoque en marketing digital.",
+      "gender": "Mujer",
+      "category": "marketing-digital",
+      "profession": "Content Manager",
+      "photoFile": "Foto-17.jpg",
+      "profileViews": 49218
+    },
+    {
+      "username": "CoachMati_11",
+      "email": "coachmati_11@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Matías",
+      "lastname": "Jiménez",
+      "description": "Coach ejecutivo ayudando a líderes en su desarrollo.",
+      "gender": "Hombre",
+      "category": "coaching",
+      "profession": "Coach Ejecutivo",
+      "photoFile": "Foto-18.jpg",
+      "profileViews": 22781
+    },
+    {
+      "username": "FinanzasNaty",
+      "email": "finanzasnaty@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Natalia",
+      "lastname": "Beltrán",
+      "description": "Contadora pública con experiencia en auditorías.",
+      "gender": "Mujer",
+      "category": "finanzas",
+      "profession": "Contador Público",
+      "photoFile": "Foto-19.jpg",
+      "profileViews": 1002
+    },
+    {
+      "username": "FotoPipe_88",
+      "email": "fotopipe_88@correo.com",
+      "password": "Abcd1234",
+      "firstname": "Felipe",
+      "lastname": "Salazar",
+      "description": "Fotógrafo de bodas con más de 200 eventos realizados.",
+      "gender": "Hombre",
+      "category": "fotografia",
+      "profession": "Fotógrafo de Bodas",
+      "photoFile": "Foto-20.jpg",
+      "profileViews": 381223
     }
   ],
-  "articles": [
+  "socials": [
     {
-      "title": "The internet's Own boy",
-      "slug": "the-internet-s-own-boy",
-      "category": {
-        "id": 5
-      },
-      "author": {
-        "id": 1
-      },
-      "description": "Follow the story of Aaron Swartz, the boy who could change the world",
-      "cover": null,
-      "blocks": [
-        {
-          "__component": "shared.rich-text",
-          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
-        },
-        {
-          "__component": "shared.quote",
-          "title": "Thelonius Monk",
-          "body": "You've got to dig it to dig it, you dig?"
-        },
-        {
-          "__component": "shared.media",
-          "file": "coffee-art.jpg"
-        },
-        {
-          "__component": "shared.rich-text",
-          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
-        },
-        {
-          "__component": "shared.slider",
-          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
-        }
-      ]
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "AndresG_94"
     },
     {
-      "title": "This shrimp is awesome",
-      "slug": "this-shrimp-is-awesome",
-      "category": {
-        "id": 4
-      },
-      "author": {
-        "id": 1
-      },
-      "description": "Mantis shrimps, or stomatopods, are marine crustaceans of the order Stomatopoda.",
-      "cover": null,
-      "blocks": [
-        {
-          "__component": "shared.rich-text",
-          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
-        },
-        {
-          "__component": "shared.quote",
-          "title": "Thelonius Monk",
-          "body": "You've got to dig it to dig it, you dig?"
-        },
-        {
-          "__component": "shared.media",
-          "file": "coffee-art.jpg"
-        },
-        {
-          "__component": "shared.rich-text",
-          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
-        },
-        {
-          "__component": "shared.slider",
-          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
-        }
-      ]
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "AndresG_94"
     },
     {
-      "title": "A bug is becoming a meme on the internet",
-      "slug": "a-bug-is-becoming-a-meme-on-the-internet",
-      "category": {
-        "id": 2
-      },
-      "author": {
-        "id": 2
-      },
-      "description": "How a bug on MySQL is becoming a meme on the internet",
-      "cover": null,
-      "blocks": [
-        {
-          "__component": "shared.rich-text",
-          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
-        },
-        {
-          "__component": "shared.quote",
-          "title": "Thelonius Monk",
-          "body": "You've got to dig it to dig it, you dig?"
-        },
-        {
-          "__component": "shared.media",
-          "file": "coffee-art.jpg"
-        },
-        {
-          "__component": "shared.rich-text",
-          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
-        },
-        {
-          "__component": "shared.slider",
-          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
-        }
-      ]
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "user": "AndresG_94"
     },
     {
-      "title": "Beautiful picture",
-      "slug": "beautiful-picture",
-      "category": {
-        "id": 4
-      },
-      "author": {
-        "id": 2
-      },
-      "description": "Description of a beautiful picture",
-      "cover": null,
-      "blocks": [
-        {
-          "__component": "shared.rich-text",
-          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
-        },
-        {
-          "__component": "shared.quote",
-          "title": "Thelonius Monk",
-          "body": "You've got to dig it to dig it, you dig?"
-        },
-        {
-          "__component": "shared.media",
-          "file": "coffee-art.jpg"
-        },
-        {
-          "__component": "shared.rich-text",
-          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
-        },
-        {
-          "__component": "shared.slider",
-          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
-        }
-      ]
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "user": "LuisaArt3"
     },
     {
-      "title": "What's inside a Black Hole",
-      "slug": "what-s-inside-a-black-hole",
-      "category": {
-        "id": 1
-      },
-      "author": {
-        "id": 2
-      },
-      "description": "Maybe the answer is in this article, or not...",
-      "cover": null,
-      "blocks": [
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "xXCamiloDevXx"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "xXCamiloDevXx"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "MariaMobile_21"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "MariaMobile_21"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "user": "JuliSEO7"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "CarlaFinanceX"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "LifeCoach_JP"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "user": "LauraEnIngles"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "LauraEnIngles"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "CineFanatic09"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "user": "ValenFit_88"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "ValenFit_88"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "ValenFit_88"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "NutriCamilaX"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "NutriCamilaX"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "user": "ModaJuan22"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "ModaJuan22"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "BeautyLina_7"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "BeautyLina_7"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "UXJose_Dev"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "user": "UXJose_Dev"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "FilmLoverAna"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "FilmLoverAna"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "user": "TrainerLeo99"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "SEOandreaX"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "SEOandreaX"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "user": "SEOandreaX"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "user": "CoachMati_11"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "CoachMati_11"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "FinanzasNaty"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "user": "FotoPipe_88"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "user": "FotoPipe_88"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "user": "FotoPipe_88"
+    }
+  ],
+  "portfolios": [
+    {
+      "title": "Identidad visual para startup tecnológica",
+      "slug": "identidad-visual-startup-tecnologica",
+      "description": "Desarrollo completo de marca para una aplicación móvil.",
+      "photoFiles": ["Portfolio-01.jpg", "Portfolio-02.jpg", "Portfolio-03.jpg"],
+      "user": "AndresG_94"
+    },
+    {
+      "title": "Branding para cafetería artesanal",
+      "slug": "branding-cafeteria-artesanal",
+      "description": "Diseño de logo, empaques y elementos visuales para un café local.",
+      "photoFiles": ["Portfolio-04.jpg", "Portfolio-05.jpg"],
+      "user": "AndresG_94"
+    },
+    {
+      "title": "Editorial de moda 'Street Style'",
+      "slug": "editorial-moda-street-style",
+      "description": "Sesión fotográfica para revista de moda urbana.",
+      "photoFiles": ["Portfolio-06.jpg", "Portfolio-07.jpg", "Portfolio-08.jpg"],
+      "user": "LuisaArt3"
+    },
+    {
+      "title": "Proyecto Full Stack para E-commerce",
+      "slug": "proyecto-full-stack-e-commerce",
+      "description": "Construcción de una plataforma de comercio electrónico con React y Node.js.",
+      "photoFiles": ["Portfolio-09.jpg", "Portfolio-10.jpg"],
+      "user": "xXCamiloDevXx"
+    },
+    {
+      "title": "Aplicación de bienestar 'Mindful App'",
+      "slug": "aplicacion-bienestar-mindful-app",
+      "description": "Desarrollo de una app Android para meditación guiada.",
+      "photoFiles": ["Portfolio-11.jpg", "Portfolio-12.jpg", "Portfolio-13.jpg"],
+      "user": "MariaMobile_21"
+    },
+    {
+      "title": "Estrategia SEO para blog de viajes",
+      "slug": "estrategia-seo-blog-viajes",
+      "description": "Auditoría SEO y plan de contenidos para aumentar el tráfico orgánico.",
+      "photoFiles": ["Portfolio-14.jpg"],
+      "user": "JuliSEO7"
+    },
+    {
+      "title": "Plan de inversiones sostenibles",
+      "slug": "plan-inversiones-sostenibles",
+      "description": "Asesoría financiera para clientes interesados en fondos de impacto.",
+      "photoFiles": ["Portfolio-15.jpg", "Portfolio-16.jpg"],
+      "user": "CarlaFinanceX"
+    },
+    {
+      "title": "Curso de inglés 'English on the go'",
+      "slug": "curso-ingles-english-on-the-go",
+      "description": "Creación de material didáctico y dinámicas para clases de inglés.",
+      "photoFiles": ["Portfolio-17.jpg", "Portfolio-18.jpg"],
+      "user": "LauraEnIngles"
+    },
+    {
+      "title": "Cortometraje 'El Despertar'",
+      "slug": "cortometraje-el-despertar",
+      "description": "Dirección y postproducción de un cortometraje de drama.",
+      "photoFiles": ["Portfolio-19.jpg", "Portfolio-20.jpg", "Portfolio-21.jpg"],
+      "user": "CineFanatic09"
+    },
+    {
+      "title": "Rutinario de fuerza y fitness para principiantes",
+      "slug": "rutina-fuerza-y-fitness-para-principiantes",
+      "description": "Plan de entrenamiento personalizado para iniciar en el fitness.",
+      "photoFiles": ["Portfolio-22.jpg", "Portfolio-23.jpg"],
+      "user": "ValenFit_88"
+    },
+    {
+      "title": "Programa de alimentación consciente",
+      "slug": "programa-alimentacion-consciente",
+      "description": "Planes de nutrición personalizados basados en la atención plena.",
+      "photoFiles": ["Portfolio-24.jpg"],
+      "user": "NutriCamilaX"
+    },
+    {
+      "title": "Colección 'Urban Edge'",
+      "slug": "coleccion-urban-edge",
+      "description": "Diseño y confección de una colección inspirada en la moda urbana.",
+      "photoFiles": ["Portfolio-25.jpg", "Portfolio-26.jpg", "Portfolio-27.jpg"],
+      "user": "ModaJuan22"
+    },
+    {
+      "title": "Maquillaje de efectos especiales",
+      "slug": "maquillaje-efectos-especiales",
+      "description": "Diseño de maquillaje para cortometraje de fantasía.",
+      "photoFiles": ["Portfolio-28.jpg", "Portfolio-29.jpg"],
+      "user": "BeautyLina_7"
+    },
+    {
+      "title": "Diseño de app de productividad",
+      "slug": "diseno-app-productividad",
+      "description": "Prototipo y diseño UX/UI para una aplicación de gestión de tareas.",
+      "photoFiles": ["Portfolio-30.jpg", "Portfolio-31.jpg", "Portfolio-32.jpg"],
+      "user": "UXJose_Dev"
+    },
+    {
+      "title": "Edición de documental 'Voces del Río'",
+      "slug": "edicion-documental-voces-del-rio",
+      "description": "Postproducción y montaje de un documental sobre el medio ambiente.",
+      "photoFiles": ["Portfolio-33.jpg", "Portfolio-34.jpg"],
+      "user": "FilmLoverAna"
+    },
+    {
+      "title": "Fotografía de bodas campestres",
+      "slug": "fotografia-bodas-campestres",
+      "description": "Reportaje fotográfico de un matrimonio en la naturaleza.",
+      "photoFiles": ["Portfolio-35.jpg", "Portfolio-36.jpg", "Portfolio-37.jpg"],
+      "user": "FotoPipe_88"
+    },
+    {
+      "title": "Estrategia de contenidos para marca personal",
+      "slug": "estrategia-contenidos-marca-personal",
+      "description": "Planificación y creación de contenidos para perfiles profesionales.",
+      "photoFiles": ["Portfolio-38.jpg"],
+      "user": "SEOandreaX"
+    }
+  ],
+  "certificates": [
+    {
+      "title": "Certificado en Identidad Visual Corporativa",
+      "year": 2015,
+      "type": "Certificado",
+      "user": "AndresG_94"
+    },
+    {
+      "title": "Premio Nacional de Diseño de Marcas",
+      "year": 2018,
+      "type": "Premio",
+      "user": "AndresG_94"
+    },
+    {
+      "title": "Premio Mejor Fotografía Editorial - Vogue",
+      "year": 2019,
+      "type": "Premio",
+      "user": "LuisaArt3"
+    },
+    {
+      "title": "Certificado en Fotografía de Moda Avanzada",
+      "year": 2016,
+      "type": "Certificado",
+      "user": "LuisaArt3"
+    },
+    {
+      "title": "Certificación Full Stack Developer - React & Node",
+      "year": 2020,
+      "type": "Certificado",
+      "user": "xXCamiloDevXx"
+    },
+    {
+      "title": "Certificado en Desarrollo Android Avanzado",
+      "year": 2018,
+      "type": "Certificado",
+      "user": "MariaMobile_21"
+    },
+    {
+      "title": "Certificado en SEO Avanzado",
+      "year": 2014,
+      "type": "Certificado",
+      "user": "JuliSEO7"
+    },
+    {
+      "title": "Premio Estratega Digital del Año",
+      "year": 2021,
+      "type": "Premio",
+      "user": "JuliSEO7"
+    },
+    {
+      "title": "Certificado en Inversiones Sostenibles",
+      "year": 2017,
+      "type": "Certificado",
+      "user": "CarlaFinanceX"
+    },
+    {
+      "title": "Certificación Internacional de Enseñanza del Inglés",
+      "year": 2012,
+      "type": "Certificado",
+      "user": "LauraEnIngles"
+    },
+    {
+      "title": "Premio Mejor Cortometraje Independiente",
+      "year": 2016,
+      "type": "Premio",
+      "user": "CineFanatic09"
+    },
+    {
+      "title": "Premio a la Innovación en Cortometrajes",
+      "year": 2020,
+      "type": "Premio",
+      "user": "CineFanatic09"
+    },
+    {
+      "title": "Certificado en Entrenamiento Funcional",
+      "year": 2019,
+      "type": "Certificado",
+      "user": "ValenFit_88"
+    },
+    {
+      "title": "Premio Entrenadora Personal del Año",
+      "year": 2021,
+      "type": "Premio",
+      "user": "ValenFit_88"
+    },
+    {
+      "title": "Certificación en Nutrición Clínica",
+      "year": 2015,
+      "type": "Certificado",
+      "user": "NutriCamilaX"
+    },
+    {
+      "title": "Premio Diseño Emergente - Semana de la Moda",
+      "year": 2017,
+      "type": "Premio",
+      "user": "ModaJuan22"
+    },
+    {
+      "title": "Certificado en Maquillaje Profesional",
+      "year": 2014,
+      "type": "Certificado",
+      "user": "BeautyLina_7"
+    },
+    {
+      "title": "Certificado en UX/UI para Apps Móviles",
+      "year": 2019,
+      "type": "Certificado",
+      "user": "UXJose_Dev"
+    },
+    {
+      "title": "Premio Mejor Edición de Documental",
+      "year": 2018,
+      "type": "Premio",
+      "user": "FilmLoverAna"
+    },
+    {
+      "title": "Certificado en Preparación Física de Alto Rendimiento",
+      "year": 2016,
+      "type": "Certificado",
+      "user": "TrainerLeo99"
+    },
+    {
+      "title": "Certificación en Content Marketing",
+      "year": 2019,
+      "type": "Certificado",
+      "user": "SEOandreaX"
+    },
+    {
+      "title": "Premio Coach Ejecutivo del Año",
+      "year": 2020,
+      "type": "Premio",
+      "user": "CoachMati_11"
+    },
+    {
+      "title": "Certificado en Auditoría Financiera",
+      "year": 2013,
+      "type": "Certificado",
+      "user": "FinanzasNaty"
+    },
+    {
+      "title": "Premio Fotografía de Bodas del Año",
+      "year": 2019,
+      "type": "Premio",
+      "user": "FotoPipe_88"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 4.5,
+      "description": "Gran ojo para el diseño de marcas.",
+      "reviewer": "LuisaArt3",
+      "reviewed": "AndresG_94"
+    },
+    {
+      "rating": 5.0,
+      "description": "Muy profesional y detallista.",
+      "reviewer": "LauraEnIngles",
+      "reviewed": "AndresG_94"
+    },
+    {
+      "rating": 3.5,
+      "description": "Buen trabajo pero un poco lento.",
+      "reviewer": "JuliSEO7",
+      "reviewed": "AndresG_94"
+    },
+
+    {
+      "rating": 4.0,
+      "description": "Sus fotos de moda son increíbles.",
+      "reviewer": "AndresG_94",
+      "reviewed": "LuisaArt3"
+    },
+    {
+      "rating": 2.5,
+      "description": "Entrega tarde las sesiones.",
+      "reviewer": "CarlaFinanceX",
+      "reviewed": "LuisaArt3"
+    },
+
+    {
+      "rating": 5.0,
+      "description": "Excelente desarrollador, resuelve rápido.",
+      "reviewer": "MariaMobile_21",
+      "reviewed": "xXCamiloDevXx"
+    },
+    {
+      "rating": 4.0,
+      "description": "Buen código y comunicación clara.",
+      "reviewer": "SEOandreaX",
+      "reviewed": "xXCamiloDevXx"
+    },
+    {
+      "rating": 3.0,
+      "description": "Podría mejorar la documentación.",
+      "reviewer": "UXJose_Dev",
+      "reviewed": "xXCamiloDevXx"
+    },
+
+    {
+      "rating": 4.5,
+      "description": "Sus apps son muy intuitivas.",
+      "reviewer": "xXCamiloDevXx",
+      "reviewed": "MariaMobile_21"
+    },
+    {
+      "rating": 2.0,
+      "description": "Muchos bugs en la app inicial.",
+      "reviewer": "ValenFit_88",
+      "reviewed": "MariaMobile_21"
+    },
+
+    {
+      "rating": 4.0,
+      "description": "Mejoró el tráfico de mi web.",
+      "reviewer": "LauraEnIngles",
+      "reviewed": "JuliSEO7"
+    },
+    {
+      "rating": 1.5,
+      "description": "No vi resultados en SEO.",
+      "reviewer": "CineFanatic09",
+      "reviewed": "JuliSEO7"
+    },
+
+    {
+      "rating": 5.0,
+      "description": "Me ayudó con mis inversiones.",
+      "reviewer": "FinanzasNaty",
+      "reviewed": "CarlaFinanceX"
+    },
+
+    {
+      "rating": 4.5,
+      "description": "Me motivó a mejorar mi vida.",
+      "reviewer": "ValenFit_88",
+      "reviewed": "LifeCoach_JP"
+    },
+    {
+      "rating": 2.0,
+      "description": "Sesión poco útil.",
+      "reviewer": "TrainerLeo99",
+      "reviewed": "LifeCoach_JP"
+    },
+
+    {
+      "rating": 5.0,
+      "description": "Clases dinámicas y divertidas.",
+      "reviewer": "AndresG_94",
+      "reviewed": "LauraEnIngles"
+    },
+    {
+      "rating": 4.5,
+      "description": "Explica con mucha paciencia.",
+      "reviewer": "NutriCamilaX",
+      "reviewed": "LauraEnIngles"
+    },
+    {
+      "rating": 3.0,
+      "description": "Un poco cara la clase.",
+      "reviewer": "ModaJuan22",
+      "reviewed": "LauraEnIngles"
+    },
+
+    {
+      "rating": 4.0,
+      "description": "Buen manejo de cámaras.",
+      "reviewer": "FilmLoverAna",
+      "reviewed": "CineFanatic09"
+    },
+    {
+      "rating": 3.0,
+      "description": "Historias interesantes pero ritmo lento.",
+      "reviewer": "BeautyLina_7",
+      "reviewed": "CineFanatic09"
+    },
+
+    {
+      "rating": 5.0,
+      "description": "Excelente entrenadora, motiva mucho.",
+      "reviewer": "LifeCoach_JP",
+      "reviewed": "ValenFit_88"
+    },
+    {
+      "rating": 4.5,
+      "description": "Entrenamientos muy efectivos.",
+      "reviewer": "NutriCamilaX",
+      "reviewed": "ValenFit_88"
+    },
+    {
+      "rating": 2.5,
+      "description": "Exigente pero poco flexible.",
+      "reviewer": "LauraEnIngles",
+      "reviewed": "ValenFit_88"
+    },
+
+    {
+      "rating": 4.5,
+      "description": "Me enseñó a comer mejor.",
+      "reviewer": "ValenFit_88",
+      "reviewed": "NutriCamilaX"
+    },
+
+    {
+      "rating": 5.0,
+      "description": "Diseños muy innovadores.",
+      "reviewer": "LuisaArt3",
+      "reviewed": "ModaJuan22"
+    },
+
+    {
+      "rating": 4.0,
+      "description": "Maquillaje impecable para eventos.",
+      "reviewer": "LauraEnIngles",
+      "reviewed": "BeautyLina_7"
+    },
+    {
+      "rating": 2.0,
+      "description": "Llegó tarde al rodaje.",
+      "reviewer": "CineFanatic09",
+      "reviewed": "BeautyLina_7"
+    },
+
+    {
+      "rating": 4.5,
+      "description": "Diseños UX claros y modernos.",
+      "reviewer": "MariaMobile_21",
+      "reviewed": "UXJose_Dev"
+    },
+
+    {
+      "rating": 5.0,
+      "description": "Edición muy profesional.",
+      "reviewer": "CineFanatic09",
+      "reviewed": "FilmLoverAna"
+    },
+
+    {
+      "rating": 4.0,
+      "description": "Entrenamientos intensos y efectivos.",
+      "reviewer": "ValenFit_88",
+      "reviewed": "TrainerLeo99"
+    },
+    {
+      "rating": 3.5,
+      "description": "Falta puntualidad en algunos días.",
+      "reviewer": "CoachMati_11",
+      "reviewed": "TrainerLeo99"
+    },
+
+    {
+      "rating": 4.5,
+      "description": "Gran manejo de contenidos digitales.",
+      "reviewer": "JuliSEO7",
+      "reviewed": "SEOandreaX"
+    },
+
+    {
+      "rating": 5.0,
+      "description": "Excelente guía como coach ejecutivo.",
+      "reviewer": "CarlaFinanceX",
+      "reviewed": "CoachMati_11"
+    },
+    {
+      "rating": 3.0,
+      "description": "Poco enfoque en mis objetivos.",
+      "reviewer": "ValenFit_88",
+      "reviewed": "CoachMati_11"
+    },
+
+    {
+      "rating": 4.0,
+      "description": "Muy organizada en auditorías.",
+      "reviewer": "SEOandreaX",
+      "reviewed": "FinanzasNaty"
+    },
+
+    {
+      "rating": 5.0,
+      "description": "Fotografías hermosas en mi boda.",
+      "reviewer": "BeautyLina_7",
+      "reviewed": "FotoPipe_88"
+    },
+    {
+      "rating": 4.5,
+      "description": "Gran captura de momentos especiales.",
+      "reviewer": "LuisaArt3",
+      "reviewed": "FotoPipe_88"
+    }
+  ],
+  "blogs": [
+    {
+      "title": "5 Claves para un Branding de Impacto que Deje Huella",
+      "slug": "5-claves-branding-impacto-deje-huella",
+      "photoFile": "Blog-01.jpg",
+      "duration": 11,
+      "description": "El branding es el alma de una empresa. Te comparto las estrategias para construir una marca que conecte emocionalmente.",
+      "content": [
         {
-          "__component": "shared.rich-text",
-          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "En un mercado saturado, ser visto ya no es suficiente. El verdadero desafío es ser recordado. Un branding sólido va mucho más allá de un logo o una paleta de colores; es la promesa que tu empresa hace a sus clientes. En mis años como diseñador, he notado que las marcas más exitosas son las que cuentan una historia coherente y auténtica. Aquí te dejo las 5 claves que considero fundamentales para lograrlo.",
+              "type": "text"
+            }
+          ]
         },
         {
-          "__component": "shared.quote",
-          "title": "Thelonius Monk",
-          "body": "You've got to dig it to dig it, you dig?"
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "1. Define tu Propósito Único",
+              "type": "text"
+            }
+          ]
         },
         {
-          "__component": "shared.media",
-          "file": "coffee-art.jpg"
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Antes de pensar en lo visual, pregúntate por qué existe tu marca. ¿Cuál es su misión? ¿Qué problema resuelve? La respuesta a estas preguntas es el 'ADN' de tu marca y debe ser el punto de partida de toda tu estrategia de comunicación. Sin un propósito claro, tu branding carecerá de dirección y autenticidad.",
+              "type": "text"
+            }
+          ]
         },
         {
-          "__component": "shared.rich-text",
-          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "2. Conoce a tu Audiencia en Profundidad",
+              "type": "text"
+            }
+          ]
         },
         {
-          "__component": "shared.slider",
-          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "No puedes conectar si no sabes con quién hablas. Investiga a tu público objetivo: sus valores, sus necesidades y sus puntos de dolor. Esto no solo te ayudará a diseñar una identidad visual que les atraiga, sino que también te permitirá adaptar tu mensaje para que resuene de verdad con ellos. Es una inversión de tiempo que se traduce en lealtad a largo plazo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "3. Coherencia en todos los Puntos de Contacto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Un buen branding es consistente. Desde tu página web y tus redes sociales, hasta tus tarjetas de presentación y el empaque de tus productos, cada elemento debe reflejar la misma identidad visual y verbal. Esta coherencia genera confianza y hace que tu marca sea reconocible al instante. Recuerda, la repetición crea reconocimiento.",
+              "type": "text"
+            }
+          ]
         }
-      ]
+      ],
+      "user": "AndresG_94"
+    },
+    {
+      "title": "Dominando la Fotografía de Moda en la Calle: Más Allá del Posing",
+      "slug": "dominando-fotografia-moda-calle-mas-alla-posing",
+      "photoFile": "Blog-02.jpg",
+      "duration": 9,
+      "description": "Te revelo mis técnicas para capturar la esencia del 'street style' en un entorno dinámico y real.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "El 'street style' no es solo una tendencia; es una forma de expresión personal que celebra la individualidad. Como fotógrafa de moda, me fascina la espontaneidad y la autenticidad que la calle ofrece. A diferencia de un estudio, el entorno urbano es impredecible, lo que lo convierte en un lienzo perfecto para una narrativa visual. En este post, te comparto los secretos que he aprendido en mis sesiones en exteriores para capturar la energía de la moda en movimiento.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Encontrando la Luz Perfecta",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "La luz natural es tu mejor aliada. Las 'horas doradas' —temprano en la mañana y al atardecer— ofrecen una luz suave y cálida que puede transformar una simple calle en un escenario mágico. También me gusta experimentar con la luz dura del mediodía para crear sombras dramáticas y contrastes que resalten las texturas de la ropa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Interactuando con el Modelo",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "La clave es la naturalidad. En lugar de dar instrucciones rígidas, le pido a mis modelos que caminen, que se muevan y que se comporten como si estuvieran en su día a día. Mi objetivo es capturar un momento, una emoción, algo que se sienta real y no posado. La conexión entre el fotógrafo y el modelo es lo que hace que una imagen sea poderosa.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "El Entorno como Parte de la Historia",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "El fondo no es solo un fondo. Los graffitis, las texturas de una pared, la arquitectura de un edificio... cada elemento en la calle puede complementar el atuendo y contar parte de la historia. Utiliza el entorno para crear profundidad y contexto, transformando una simple foto de moda en una editorial de revista. ",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "user": "LuisaArt3"
+    },
+    {
+      "title": "Desarrollo Full Stack: Backend vs. Frontend, la Batalla por el Dominio Web",
+      "slug": "desarrollo-full-stack-backend-vs-frontend",
+      "photoFile": "Blog-03.jpg",
+      "duration": 13,
+      "description": "Como desarrollador Full Stack, vivo la dualidad de ambos mundos.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A menudo me preguntan si es mejor especializarse en el frontend o en el backend. Mi respuesta siempre es la misma: ambos son fundamentales y, como Full Stack Developer, mi trabajo es asegurarme de que se complementen a la perfección. Piensa en una casa: el frontend es la fachada, la decoración y la distribución de las habitaciones, mientras que el backend es la plomería, el cableado y los cimiento. Una casa puede verse hermosa, pero si las tuberías no funcionan, no sirve de nada. Vamos a sumergirnos en la batalla...",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "El Backend: El Motor Silencioso",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "El backend es el corazón de cualquier aplicación web. Se encarga de la lógica de negocio, la interacción con la base de datos, la gestión de usuarios, las API y la seguridad. Es el código que se ejecuta en el servidor. En mi caso, trabajo con Node.js, un entorno que me permite usar JavaScript tanto en el frontend como en el backend, lo cual agiliza mucho el desarrollo. La eficiencia y la seguridad son las prioridades aquí.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "El Frontend: La Cara de la Aplicación",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "El frontend es la parte con la que el usuario interactúa directamente: los botones, los menús, las animaciones y la disposición de la información. Mi especialidad es **React**, un framework que me permite crear interfaces de usuario dinámicas y reactivas. El objetivo es proporcionar una experiencia de usuario fluida e intuitiva. El diseño, la accesibilidad y el rendimiento en el navegador son las grandes preocupaciones del frontend.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "La Sinergia de Ambos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lo que hace que el desarrollo Full Stack sea tan poderoso es la capacidad de pensar en la aplicación como un todo. Entender cómo los datos del backend se estructuran y se envían al frontend, y cómo el frontend debe interactuar con esas APIs, permite crear soluciones más optimizadas y eficientes. Es la combinación de la lógica con la estética, la funcionalidad con la usabilidad. Es la habilidad de construir la casa completa, no solo la fachada o el cableado.",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "user": "xXCamiloDevXx"
+    },
+    {
+      "title": "Cómo Crear una App con Impacto Social y Transformar Vidas",
+      "slug": "como-crear-app-con-impacto-social",
+      "photoFile": "Blog-04.jpg",
+      "duration": 10,
+      "description": "El desarrollo de apps no es solo código; es una herramienta poderosa para el cambio.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Siempre he creído que la tecnología tiene el poder de resolver los problemas más apremiantes del mundo. Como desarrolladora Android, mi pasión es crear aplicaciones que no solo sean funcionales, sino que también generen un impacto positivo en la sociedad. Si sueñas con usar tus habilidades de programación para el bien, este post es para ti. Te mostraré cómo llevar una idea con propósito a la realidad, paso a paso.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "1. Identifica un Problema Real",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "El primer paso es la empatía. ¿Qué problema quieres resolver? Puede ser algo tan grande como el acceso a la educación en zonas remotas, o tan específico como una app que ayude a personas mayores a conectarse con sus familiares. La clave es que el problema sea relevante y que tu app ofrezca una solución viable.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "2. Investiga y Valida la Idea",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Antes de escribir una línea de código, investiga si ya existe una solución similar. Habla con tu público objetivo. ¿Les sería útil tu app? ¿Qué características necesitan? Esta etapa es crucial para asegurarte de que tu esfuerzo de desarrollo tendrá un impacto real.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "3. Diseña una Experiencia de Usuario Intuitiva",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Una app con propósito debe ser fácil de usar para todos. Dedica tiempo al diseño de la experiencia de usuario (UX) y la interfaz (UI). Si la app es complicada, la gente simplemente no la usará. Piensa en la accesibilidad, en un flujo de usuario lógico y en un diseño limpio que no distraiga del objetivo principal.",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "user": "MariaMobile_21"
+    },
+    {
+      "title": "Especialista en SEO: La Auditoría es tu Aliada, no tu Enemiga",
+      "slug": "especialista-seo-auditoria-es-tu-aliada",
+      "photoFile": "Blog-05.jpg",
+      "duration": 8,
+      "description": "Te muestro cómo utilizarlas para encontrar los 'agujeros negros' de tu sitio y catapultar tu posicionamiento.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "El mundo del SEO es un laberinto de algoritmos y actualizaciones. A menudo, los clientes llegan a mí frustrados porque, a pesar de crear contenido de calidad, sus sitios web no escalan en los rankings de Google. La respuesta casi siempre está en una auditoría SEO. Es el proceso metódico de desglosar cada aspecto técnico y de contenido de tu sitio para encontrar lo que está fallando. Es una radiografía de la salud de tu página. En este post, te revelo los puntos clave que no puedes pasar por alto.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Análisis Técnico a Fondo",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "format": "unordered",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Velocidad de carga: Si tu sitio tarda más de 3 segundos en cargar, ya estás perdiendo. Google penaliza los sitios lentos.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Optimización para móviles: Hoy en día, la mayoría de las búsquedas se hacen desde dispositivos móviles. Tu sitio debe ser 'mobile-friendly'.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Problemas de indexación: Asegúrate de que los robots de Google puedan rastrear tu sitio sin obstáculos. Revisa el archivo 'robots.txt' y el 'sitemap'.",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Evaluación de Contenido y Palabras Clave",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "format": "unordered",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Calidad del contenido: ¿Tu contenido es útil y relevante? La intención de búsqueda es clave. Asegúrate de que tu contenido responda a las preguntas de tus usuarios.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Optimización de palabras clave: ¿Estás utilizando las palabras clave correctas de forma natural? Evita el 'keyword stuffing'.",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "user": "JuliSEO7"
+    },
+    {
+      "title": "Las Inversiones Sostenibles: Una Revolución con Propósito",
+      "slug": "inversiones-sostenibles-revolucion-proposito",
+      "photoFile": "Blog-06.jpg",
+      "duration": 10,
+      "description": "Te muestro cómo el mundo de las finanzas está adoptando un enfoque más consciente, un dólar a la vez.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Durante mucho tiempo, la meta de la inversión era simple: maximizar los retornos. Pero los tiempos están cambiando. Hoy, cada vez más personas, especialmente las nuevas generaciones, quieren que su dinero trabaje por un futuro mejor. Las **inversiones sostenibles**, también conocidas como **inversiones de impacto** o **inversiones ESG** (Ambiental, Social y de Gobernanza), han pasado de ser un nicho a una tendencia principal. Como asesora financiera, creo firmemente que no tienes que sacrificar rentabilidad para invertir en tus valores. De hecho, a menudo ocurre lo contrario.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "¿Qué son los Criterios ESG?",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Los criterios ESG son un marco de evaluación de las empresas que va más allá de los números financieros. Se enfocan en:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "format": "unordered",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Ambiental (E): ¿Cómo gestiona la empresa su huella de carbono? ¿Utiliza energías renovables?",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Social (S): ¿Cómo trata a sus empleados? ¿Es equitativa y diversa? ¿Tiene un impacto positivo en la comunidad?",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Gobernanza (G): ¿Existe una estructura de liderazgo transparente? ¿Se evita la corrupción?",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "user": "CarlaFinanceX"
+    },
+    {
+      "title": "Coaching de vida: La Fórmula para Desbloquear tu Máximo Potencial",
+      "slug": "coaching-vida-desbloquear-maximo-potencial",
+      "photoFile": "Blog-07.jpg",
+      "duration": 7,
+      "description": "Más que un simple consejero, un coach de vida te ayuda a encontrar tus propias respuestas.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "En mi experiencia, la mayoría de las personas ya tienen las respuestas a sus problemas dentro de sí mismas. La diferencia es que a veces necesitan un guía que les ayude a verlas. El coaching de vida es un proceso de acompañamiento que te empodera para identificar tus metas, superar los obstáculos que te frenan y diseñar un plan de acción para alcanzar el éxito, sea cual sea tu definición de éxito. No se trata de dar consejos, sino de hacer las preguntas correctas para que tú descubras tu propio camino.",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "user": "LifeCoach_JP"
+    },
+    {
+      "title": "El Futuro del Diseño UX/UI Móvil: De la Usabilidad a la Inmersión",
+      "slug": "futuro-diseno-ux-ui-movil-inmersion",
+      "photoFile": "Blog-08.jpg",
+      "duration": 12,
+      "description": "Analizo las tendencias que están revolucionando la forma en que interactuamos con nuestros dispositivos móviles.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "El diseño de experiencia de usuario (UX) y de interfaz (UI) para apps móviles está en una constante evolución. Lo que antes era funcional, ahora debe ser intuitivo e inmersivo. Las nuevas tecnologías no solo cambian las herramientas, sino la forma en que pensamos el diseño. A medida que los dispositivos se vuelven más inteligentes, las experiencias de usuario deben ser más fluidas y personalizadas. Aquí te comparto mis reflexiones sobre las tendencias que están moldeando el futuro del UX/UI móvil.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Realidad Aumentada (RA) y Realidad Virtual (RV)",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "La RA y la RV están saliendo del nicho de los videojuegos para integrarse en aplicaciones de uso diario. El diseño de interfaces para estos entornos es un nuevo desafío que requiere pensar en 3D y en la interacción del usuario con el mundo real. Piensa en una app de compras que te permita 'probarte' ropa virtualmente o un mapa que superponga direcciones sobre tu cámara. El UX ahora debe considerar el espacio físico.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Personalización Impulsada por la Inteligencia Artificial (IA)",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "La IA está permitiendo a las apps aprender de nuestros comportamientos para ofrecer una experiencia única. Esto significa que el diseño ya no es estático. El UI puede adaptarse dinámicamente según las preferencias del usuario, su historial de uso y su ubicación. El desafío para el diseñador es crear un sistema flexible que se adapte sin sacrificar la coherencia visual.",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "user": "UXJose_Dev"
+    },
+    {
+      "title": "La Importancia del Coaching Ejecutivo en el Liderazgo Moderno",
+      "slug": "importancia-coaching-ejecutivo-liderazgo-moderno",
+      "photoFile": "Blog-09.jpg",
+      "duration": 9,
+      "description": "El liderazgo no se trata solo de gestionar equipos, sino de crecer como persona.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "En el entorno empresarial de hoy, el rol de un líder ha evolucionado. Ya no se trata solo de dar órdenes, sino de inspirar, motivar y potenciar el talento de los equipos. Para enfrentar estos desafíos, muchos líderes están recurriendo al coaching ejecutivo. Es una inversión estratégica que permite a los directivos pulir sus habilidades, manejar el estrés y tomar decisiones más efectivas. Como coach, he sido testigo de transformaciones increíbles en el rendimiento y la visión de los líderes con los que trabajo.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Más Allá de la Gestión: Habilidades Blandas",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "El coaching ejecutivo se enfoca en las **habilidades blandas** o 'soft skills'. La comunicación efectiva, la inteligencia emocional, la empatía y la resiliencia son pilares de un liderazgo exitoso. A través de conversaciones estructuradas y ejercicios prácticos, ayudo a los líderes a desarrollar estas habilidades para que puedan manejar mejor los conflictos, construir relaciones más sólidas con sus equipos y fomentar un ambiente de trabajo positivo.",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "user": "CoachMati_11"
+    },
+    {
+      "title": "Mi Primera Guía para Fotógrafos de Bodas: De Novato a Profesional",
+      "slug": "guia-fotografos-bodas-novato-a-profesional",
+      "photoFile": "Blog-10.jpg",
+      "duration": 11,
+      "description": "Te comparto los secretos que he aprendido en más de 200 bodas para crear recuerdos inolvidables.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "La fotografía de bodas es una de las disciplinas más exigentes, pero también de las más gratificantes. Tienes una sola oportunidad para capturar un momento irrepetible, y la presión es alta. Después de más de 200 eventos, he aprendido que el éxito no se basa solo en tener el mejor equipo, sino en la capacidad de conectar con las personas, anticipar los momentos y contar una historia. Si estás empezando en este camino, aquí tienes algunos consejos que me hubiera gustado recibir.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Antes del Gran Día: La Planificación",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Una buena fotografía de bodas comienza mucho antes de la ceremonia. Me reúno con los novios para entender su visión, los momentos más importantes para ellos y los detalles que quieren que queden inmortalizados. Visito los lugares para planificar las tomas y la iluminación. La preparación es clave para un día sin estrés.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Durante el Evento: Anticipación y Conexión",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "En el día de la boda, mi principal objetivo es ser casi invisible. Me muevo discretamente para capturar momentos espontáneos: una lágrima, una sonrisa, una mirada de complicidad. La **anticipación** es mi superpoder. Sé cuándo el novio se va a emocionar o cuándo los padres van a abrazar a sus hijos. Pero la parte más importante es la **conexión** que he construido con la pareja. Cuando se sienten cómodos conmigo, las fotos fluyen de forma natural.",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "user": "FotoPipe_88"
+    },
+    {
+      "title": "Content Manager: Creando Contenido que Vende sin Vender",
+      "slug": "content-manager-contenido-que-vende-sin-vender",
+      "photoFile": "Blog-11.jpg",
+      "duration": 9,
+      "description": "Ahora, el contenido es la clave para atraer y retener a tu audiencia, creando una relación de confianza.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "En el vasto universo del marketing digital, el marketing de contenidos es la estrella que brilla con más fuerza. Se trata de crear y distribuir material valioso, relevante y coherente para atraer a un público definido, con el objetivo de generar una acción rentable del cliente. Como Content Manager, mi trabajo no es solo escribir, sino trazar una estrategia completa que posicione a la marca como una autoridad en su nicho.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "La Estrategia Detrás del Contenido",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Una buena estrategia de contenidos comienza con la investigación. Analizo a la audiencia, sus necesidades, sus preguntas y sus intereses. Esto me permite crear un calendario editorial con temas que realmente resuenen con ellos. Luego, se definen los formatos: blogs, videos, infografías, podcasts, etc. La meta es estar donde tu audiencia está, con el contenido que necesitan.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Calidad por encima de Cantidad",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Es un error común pensar que más contenido es mejor. En realidad, un solo artículo bien investigado, bien escrito y optimizado puede generar más tráfico y leads que diez artículos mediocres. La clave es ofrecer valor, educar y entretener. Cuando construyes una relación de confianza con tu audiencia a través de tu contenido, ellos se convierten en clientes de forma natural.",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "user": "SEOandreaX"
+    },
+    {
+      "title": "Transforma tu Cuerpo y tu Mente con Entrenamientos de Fuerza",
+      "slug": "entrenamientos-fuerza-transforma-cuerpo-mente",
+      "photoFile": "Blog-12.jpg",
+      "duration": 8,
+      "description": "Te demuestro por qué es el mejor camino para lograr un cuerpo fuerte y una mente enfocada.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A menudo, las personas se centran en el cardio para perder peso, pero ignoran los beneficios transformadores del **entrenamiento de fuerza**. Como entrenadora personal, mi filosofía se basa en el poder de la fuerza para mejorar tu composición corporal, tu salud metabólica y tu bienestar mental. No se trata solo de levantar pesas, sino de construir un cuerpo funcional que te sirva en tu día a día. Aquí te explico por qué deberías darle una oportunidad a la fuerza.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Beneficios Físicos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "format": "unordered",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Aumenta el metabolismo en reposo, lo que significa que quemas más calorías incluso cuando no te estás moviendo.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Mejora la densidad ósea, previniendo la osteoporosis.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Ayuda a controlar los niveles de azúcar en la sangre y a reducir el riesgo de diabetes tipo 2.",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "user": "ValenFit_88"
+    },
+    {
+      "title": "La Nutrición Clínica va más allá del Peso: Hacia una Alimentación Consciente",
+      "slug": "nutricion-clinica-alimentacion-consciente",
+      "photoFile": "Blog-13.jpg",
+      "duration": 10,
+      "description": "Como nutricionista, mi enfoque es guiar a mis pacientes a entender su cuerpo y a construir una relación sana.",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "La nutrición clínica se centra en la ciencia de los alimentos y su efecto en la salud. Sin embargo, mi trabajo no se limita a crear planes de dieta. Mi objetivo es que mis pacientes logren una **alimentación consciente**, que es mucho más que solo contar calorías o macros. Se trata de reconectar con tu cuerpo, de escuchar sus señales de hambre y saciedad, y de disfrutar cada bocado sin culpa. En un mundo lleno de información contradictoria sobre dietas, mi misión es ofrecer un camino sostenible y empoderador.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "text": "Los Pilares de la Alimentación Consciente",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "format": "ordered",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Presta atención a tus sentidos: Observa los colores, las texturas y los aromas de tu comida. Come despacio y sin distracciones.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Identifica el hambre y la saciedad: Antes de comer, pregúntate si realmente tienes hambre. Y cuando comas, detente al sentirte satisfecho, no cuando el plato esté vacío.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "No te juzgues: No hay 'alimentos buenos' o 'alimentos malos'. Se trata de tomar decisiones informadas y flexibles.",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "user": "NutriCamilaX"
     }
   ]
 }

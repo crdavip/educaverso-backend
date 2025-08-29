@@ -42,12 +42,6 @@
       ],
       "required": true
     },
-    "reviews": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::review.review",
-      "mappedBy": "reviewed"
-    },
     "user": {
       "type": "relation",
       "relation": "oneToOne",
@@ -92,6 +86,18 @@
     "profession": {
       "type": "string",
       "required": true
+    },
+    "reviewsWritten": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "reviewer"
+    },
+    "reviewsReceived": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "reviewed"
     }
   }
 }

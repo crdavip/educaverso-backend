@@ -4,7 +4,16 @@ const fs = require("fs-extra");
 const path = require("path");
 const mime = require("mime-types");
 const bcrypt = require("bcryptjs");
-const { categories, professions, users, socials } = require("./data.json");
+const {
+  categories,
+  professions,
+  users,
+  socials,
+  portfolios,
+  certificates,
+  reviews,
+  blogs,
+} = require("../data/data.json");
 
 async function run() {
   const { createStrapi, compileStrapi } = require("@strapi/strapi");
@@ -17,6 +26,10 @@ async function run() {
   const PROFESSION_UID = "api::profession.profession";
   const USER_DETAIL_UID = "api::user-detail.user-detail";
   const SOCIAL_UID = "api::social.social";
+  const PORTFOLIO_UID = "api::portfolio.portfolio";
+  const BLOG_UID = "api::blog.blog";
+  const CERTIFICATE_UID = "api::certificate.certificate";
+  const REVIEW_UID = "api::review.review";
 
   const clearDocuments = async (uid) => {
     const existingDocs = await strapi.documents(uid).findMany({ limit: 10000 });
@@ -141,9 +154,9 @@ async function run() {
       lastname,
       description,
       gender,
-      category: existingCategory.documentId,
+      category: { connect: [{ documentId: existingCategory.documentId }] },
       profession,
-      user: idUser,
+      user: { connect: [{ id: idUser }] },
       profileImage,
       profileViews,
     });
@@ -154,9 +167,12 @@ async function run() {
   try {
     await clearDocuments(CATEGORY_UID);
     await clearDocuments(PROFESSION_UID);
+    await clearDocuments(REVIEW_UID);
+    await clearDocuments(SOCIAL_UID);
+    await clearDocuments(PORTFOLIO_UID);
+    await clearDocuments(BLOG_UID);
     await clearDocuments(USER_DETAIL_UID);
     await clearUsers();
-    await clearDocuments(SOCIAL_UID);
 
     const categoryMap = {};
     for (const category of categories) {
@@ -174,11 +190,12 @@ async function run() {
       for (const professionName of group.professions) {
         await createAndPublish(PROFESSION_UID, {
           name: professionName,
-          category: categoryId,
+          category: { connect: [{ documentId: categoryId }] },
         });
       }
     }
 
+    const userDetailMap = {};
     for (const user of users) {
       const newUser = await createUserWithAdmin(user);
 
@@ -187,14 +204,79 @@ async function run() {
         idUser: newUser.upUser.id,
       });
 
+      userDetailMap[newUser.upUser.username] = newUserDetail.userDetail.documentId;
+
       for (const social of socials) {
         if (social.user === newUser.upUser.username) {
           await createAndPublish(SOCIAL_UID, {
             ...social,
-            userDetail: newUserDetail.userDetail.documentId,
+            userDetail: { connect: [{ documentId: newUserDetail.userDetail.documentId }] },
           });
         }
       }
+
+      for (const portfolio of portfolios) {
+        if (portfolio.user === newUser.upUser.username) {
+          let images = [];
+          if (portfolio.photoFiles && portfolio.photoFiles.length > 0) {
+            for (const file of portfolio.photoFiles) {
+              const uploaded = await uploadFile(file);
+              images.push(uploaded);
+            }
+          }
+          await createAndPublish(PORTFOLIO_UID, {
+            ...portfolio,
+            images,
+            userDetail: { connect: [{ documentId: newUserDetail.userDetail.documentId }] },
+            createdBy: newUser.adminUser.id,
+            updatedBy: newUser.adminUser.id,
+          });
+        }
+      }
+
+      for (const blog of blogs) {
+        if (blog.user === newUser.upUser.username) {
+          let image = null;
+          if (blog.photoFile) {
+            image = await uploadFile(blog.photoFile);
+          }
+          await createAndPublish(BLOG_UID, {
+            ...blog,
+            image,
+            userDetail: { connect: [{ documentId: newUserDetail.userDetail.documentId }] },
+            createdBy: newUser.adminUser.id,
+            updatedBy: newUser.adminUser.id,
+          });
+        }
+      }
+
+      for (const certificate of certificates) {
+        if (certificate.user === newUser.upUser.username) {
+          await createAndPublish(CERTIFICATE_UID, {
+            ...certificate,
+            userDetail: { connect: [{ documentId: newUserDetail.userDetail.documentId }] },
+            createdBy: newUser.adminUser.id,
+            updatedBy: newUser.adminUser.id,
+          });
+        }
+      }
+    }
+
+    for (const review of reviews) {
+      const reviewerDetailId = userDetailMap[review.reviewer];
+      const reviewedDetailId = userDetailMap[review.reviewed];
+
+      if (!reviewerDetailId || !reviewedDetailId) {
+        console.warn(`⚠️ No se encontró reviewer o reviewed para ${review.reviewer} -> ${review.reviewed}`);
+        continue;
+      }
+
+      await createAndPublish(REVIEW_UID, {
+        rating: review.rating,
+        description: review.description,
+        reviewer: { connect: [{ documentId: reviewerDetailId }] },
+        reviewed: { connect: [{ documentId: reviewedDetailId }] },
+      });
     }
 
     console.log("✅ Seed Educaverso completado.");

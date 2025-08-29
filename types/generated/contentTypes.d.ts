@@ -713,7 +713,14 @@ export interface ApiUserDetailUserDetail extends Struct.CollectionTypeSchema {
       > &
       Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
-    reviews: Schema.Attribute.Relation<'oneToMany', 'api::review.review'>;
+    reviewsReceived: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::review.review'
+    >;
+    reviewsWritten: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::review.review'
+    >;
     socials: Schema.Attribute.Relation<'oneToMany', 'api::social.social'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

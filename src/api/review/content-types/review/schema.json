@@ -26,13 +26,13 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::user-detail.user-detail",
-      "inversedBy": "reviews"
+      "inversedBy": "reviewsWritten"
     },
     "reviewed": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::user-detail.user-detail",
-      "inversedBy": "reviews"
+      "inversedBy": "reviewsReceived"
     }
   }
 }
