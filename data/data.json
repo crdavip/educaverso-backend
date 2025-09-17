@@ -53,9 +53,9 @@
         "Desarrollador iOS",
         "Desarrollador Android",
         "Desarrollador Flutter",
-        "Desarrollador React Native",
-        "Ingeniero Mobile QA",
-        "Mobile UX/UI Designer"
+        "Desarrollador React",
+        "Mobile QA",
+        "Mobile UX/UI"
       ]
     },
     {
@@ -329,7 +329,7 @@
       "description": "Diseñador UX/UI con experiencia en apps móviles.",
       "gender": "Hombre",
       "category": "desarrollo-movil",
-      "profession": "Mobile UX/UI Designer",
+      "profession": "Mobile UX/UI",
       "photoFile": "Foto-14.jpg",
       "profileViews": 774923
     },
