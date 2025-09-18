@@ -4,16 +4,16 @@ Una aplicación web moderna construida para [Beunik](https://beunik.co/), diseñ
 
 ## 🖥️ Demo
 
-🔗 [Ver Demo en vivo](https://tu-sitio-web.com)  
+🔗 [Ver Demo en vivo](https://educaverso-crdavip.vercel.app/)  
 
 ---
 
 ## 🧰 Tecnologías utilizadas
 
 - **TypeScript** – Tipado estático para mayor robustez
-- **Strapi** – Tipado estático para mayor robustez
+- **Strapi** – CMS headless, que permite a los desarrolladores crear y administrar el backend
 - **PostgreSQL** - Base de datos relacional
-- **Docker** - 
+- **Docker** - Empaquetar, distribuir y ejecutar aplicaciones en contenedores
 ---
 
 ## ⚙️ Instalación
@@ -21,8 +21,8 @@ Una aplicación web moderna construida para [Beunik](https://beunik.co/), diseñ
 ### 1. Clonar el repositorio Backend
 
 ```bash
-git clone https://github.com/tu-usuario/mi-proyecto-next.git
-cd educaverso-api
+git clone https://github.com/crdavip/educaverso-backend.git
+cd educaverso-backend
 ```
 
 ### 2. Instalar las dependencias
@@ -87,7 +87,7 @@ yarn dev
 
 ### 7. Clonar y configurar el repositorio Frontend
 
-🔗 [Educaverso | Frontend](https://github.com/tu-usuario/mi-proyecto-next.git)
+🔗 [Educaverso | Frontend](https://github.com/crdavip/educaverso-frontend)
 
 ---
 
@@ -114,4 +114,4 @@ npm run upgrade             # Actualizar strapi
 
 ## 👨‍💻 Autor
 Desarrollado con ❤️ por **Cristian David**
-🔗 [GitHub](https://tu-sitio-web.com) · [LinkedIn](https://tu-sitio-web.com)
+🔗 [GitHub](https://github.com/crdavip) · [LinkedIn](https://www.linkedin.com/in/crdavip/)
