@@ -91,6 +91,28 @@ async function run() {
     return uploadedFile;
   };
 
+  const createUserAdmin = async () => {
+    const superAdminRole = await strapi.db.query("admin::role").findOne({
+      where: { code: "strapi-super-admin" },
+    });
+    if (!superAdminRole) throw new Error("⚠️ Rol 'super-admin' no encontrado en admin_users");
+
+    const hashedPassword = bcrypt.hashSync(process.env.ADMIN_PASS, 10);
+
+    const superAdminUser = await strapi.db.query("admin::user").create({
+      data: {
+        firstname: process.env.ADMIN_FIRST_NAME,
+        lastname: process.env.ADMIN_FIRST_NAME,
+        email: process.env.ADMIN_EMAIL,
+        password: hashedPassword,
+        isActive: true,
+        roles: [superAdminRole.id],
+      },
+    });
+
+    return { superAdminUser };
+  };
+
   const createUserWithAdmin = async ({ username, email, password, firstname, lastname }) => {
     const authenticatedRole = await strapi.db.query("plugin::users-permissions.role").findOne({
       where: { type: "authenticated" },
@@ -173,6 +195,8 @@ async function run() {
     await clearDocuments(BLOG_UID);
     await clearDocuments(USER_DETAIL_UID);
     await clearUsers();
+
+    await createUserAdmin();
 
     const categoryMap = {};
     for (const category of categories) {
